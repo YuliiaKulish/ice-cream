@@ -1,2 +1,8 @@
-@import './common';
-@import './example';
+@import './utils/breakpoints';
+@import './utils/mixins';
+@import './utils/vars';
+@import './utils/reset';
+@import './utils/common';
+@import './utils/cursor';
+@import './components/header';
+@import './components/header-modal';

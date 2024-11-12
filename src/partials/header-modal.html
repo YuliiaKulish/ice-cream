@@ -1,0 +1,70 @@
+<div class="modal" id="modal1">
+  <button class="close-btn" id="closeBurgerMenu" type="button">
+    <svg class="close-btn__img">
+      <use href="./images/icons.svg#icon-cross"></use>
+    </svg>
+  </button>
+  <p class="modal__title">Buy now</p>
+  <!-- List food -->
+  <ul class="modal__list">
+    <li class="modal__item modal__item--cream">Ice cream
+      <picture>
+        <source
+          srcset="
+            ./images/ice-cream.png    1x,
+            ./images/ice-cream@2x.png 2x,
+            ./images/ice-cream@3x.png 3x
+          "
+          type="image/png"
+        />
+        <img class="modal__img" src="./images/ice-cream.png" alt="Ice cream" />
+      </picture>
+    </li>
+    <li class="modal__item modal__item--coffee">Ice coffee
+      <picture>
+        <source
+          srcset="
+            ./images/ice-coffee.png    1x,
+            ./images/ice-coffee@2x.png 2x,
+            ./images/ice-coffee@3x.png 3x
+          "
+          type="image/png"
+        />
+        <img
+          class="modal__img"
+          src="./images/ice-coffee.png"
+          alt="Ice coffee"
+        />
+      </picture>
+    </li>
+    <li class="modal__item modal__item--milkshake">Milkshake
+      <picture>
+        <source
+          srcset="
+            ./images/milkshake.png    1x,
+            ./images/milkshake@2x.png 2x,
+            ./images/milkshake@3x.png 3x
+          "
+          type="image/png"
+        />
+        <img class="modal__img" src="./images/milkshake.png" alt="Milkshake" />
+      </picture>
+    </li>
+  </ul>
+  <!-- Form -->
+  <form class="form">
+    <input class="form__input" type="text" name="username" placeholder="Name" />
+    <input
+      class="form__input"
+      type="tel"
+      name="phone_number"
+      placeholder="Phone"
+    />
+    <textarea
+      class="form__comment form__input"
+      name="comment"
+      placeholder="Comment"
+    ></textarea>
+    <button class="form__submit" type="submit">Submit</button>
+  </form>
+</div>

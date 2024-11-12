@@ -1,0 +1,225 @@
+.header__container {
+  display: flex;
+  align-items: center;
+  padding-top: 12px;
+  @media screen and (min-width: $tablet) {
+    padding-top: 20px;
+  }
+  @media screen and (min-width: $desktop) {
+    justify-content: space-between;
+    padding-top: 8px;
+  }
+}
+
+// Logo
+.logo {
+  display: flex;
+  align-items: end;
+  width: 37px;
+  height: 41px;
+  @media screen and (min-width: $tablet) {
+    width: 44px;
+    height: 48px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 60px;
+    height: 65px;
+    margin-top: 8px;
+  }
+
+  &__text {
+    font-family: $second-family;
+    font-size: 14px;
+    -webkit-text-stroke: 0.74px $link-bg-color;
+    letter-spacing: -0.1em;
+    color: transparent;
+    margin-bottom: -3px;
+    margin-left: -4px;
+    line-height: 1.24;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: -4px;
+      margin-left: -5px;
+      font-size: 17px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: -5px;
+      margin-left: -7px;
+      font-size: 21px;
+    }
+  }
+
+  &__img {
+    width: 19px;
+    @media screen and (min-width: $tablet) {
+      width: 23px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 28px;
+    }
+  }
+}
+
+// Nav
+.nav {
+  display: none;
+  @media screen and (min-width: $desktop) {
+    display: block;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    font-weight: 700;
+    &:not(:last-child) {
+      @media screen and (min-width: $desktop) {
+        margin-right: 27px;
+      }
+    }
+  }
+
+  &__link {
+    padding: 20px 0;
+    transition: color $animation;
+    &:hover, &:focus {
+      color: $link-bg-color;
+    }
+  }  
+}
+
+/* Burger-icon */
+.burger-icon {
+  margin-left: auto;
+  @media screen and (min-width: $tablet) {
+    margin-right: 32px;
+  }
+  @media screen and (min-width: $desktop) {
+    display: none;
+  }
+}
+
+/* Burger-menu */
+.burger-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $main-bg-color;
+  padding: 100px 40px 63px;
+  transform: translateX(100%);
+  transition: transform $animation;
+  z-index: 1001;
+  overflow-y: auto;
+  @media screen and (min-width: $tablet) {
+    padding-top: 140px;
+  }
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  &__logo {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    @media screen and (min-width: $tablet) {
+      top: 20px;
+      left: 32px;
+    }
+  }
+
+  &__nav {
+    margin-bottom: 100px;
+  }
+
+  &__item {
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+  
+    &:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      font-size: 48px;
+      &:not(:last-child) {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__link {
+    transition: color $animation;
+    &:hover, &:focus {
+      color: $secondary-text-color;
+    }
+  }
+}
+
+/* Close-burger*/
+.close-burger {
+  position: absolute;
+  top: 16px;
+  right: 20px;
+  @media screen and (min-width: $tablet) {
+    top: 32px;
+    right: 32px;
+  }
+
+  &__img {
+    fill: $main-text-color;
+  }
+}
+
+// Open modal btn
+.open-modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 10px;
+  min-width: 152px;
+  min-height: 42px;
+  color: $secondary-text-color;
+  background-color: $link-bg-color;
+}
+
+// Header button modal
+.header__button {
+  transition: color $animation, background-color $animation;
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+
+  &--mobile {
+    margin: auto;
+    margin-bottom: 0;
+    @media screen and (min-width: $tablet) {
+      display: none;
+    }
+  }
+
+  &-img {
+    margin-left: 7px;
+    stroke: $secondary-text-color;
+    transition: stroke $animation;
+  }
+
+  &:hover, &:focus {
+    background-color: $button-border-color;
+  }
+  &:focus {
+    color: $main-text-color;
+  }
+  &:disabled {
+    background-color: $time-color;
+  }
+}
+
+.header__button:focus .header__button-img {
+    stroke: $main-text-color;
+}
