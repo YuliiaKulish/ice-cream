@@ -1,0 +1,113 @@
+<section class="hero">
+  <div class="container hero__container">
+
+        <!--Hero top content -->
+    <div class="hero__top-content">
+      <div class="hero-left">
+        <h1 class="hero__title">
+          ice cream made with <span class="hero__title--accent">passion</span>
+        </h1>
+        <!-- button -->
+        <ul class="hero__list-btn">
+          <li class="hero__item-btn">
+            <a class="hero__button hero__button--border" href="#products">Products</a>
+          </li>
+          <li class="hero__item-btn">
+            <a class="hero__button hero__button--no-border" href="#howItsMade"
+              >How it’s made?</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="hero-right">
+        <ul class="hero-right__list">
+            <li class="hero-right__item">
+                <p class="hero-right__number">16</p>
+                <p class="hero-right__text">cafes</p>
+            </li>
+            <li class="hero-right__item">
+                <p class="hero-right__number">23</p>
+                <p class="hero-right__text">food trucks</p>
+            </li>
+        </ul>
+      </div>
+    </div>
+
+    <!--Hero bottom content -->
+    <div class="hero__bottom-content">
+      <picture>
+        <source
+          srcset="
+            ./images/tablet/many-ice.png    1x,
+            ./images/tablet/many-ice@2x.png 2x,
+            ./images/tablet/many-ice@3x.png 3x
+          "
+          media="(max-width: 1199px)"
+          sizes="(max-width: 1199px) 152px"
+          type="image/png"
+        />
+        <source
+          srcset="
+            ./images/desktop/many-ice.png    1x,
+            ./images/desktop/many-ice@2x.png 2x,
+            ./images/desktop/many-ice@3x.png 3x
+          "
+          media="(min-width: 1200px)"
+          sizes="(min-width: 1200px) 225px"
+          type="image/png"
+        />
+        <img
+          class="hero__img--many-ice"
+          src="./images/desktop/many-ice.png"
+          alt="a plate with balls of various ice creams"
+        />
+      </picture>
+      <a class="hero__bottom-link" href="#"
+        >
+        <p class="hero__bottom-text">You can't buy happiness, but you can buy ice cream, and that's pretty much the same thing. The best time for ice cream is always !</p> 
+        <svg class="hero__bottom-img" width="41" height="16">
+          <use href="./images/icons.svg#icon-arrow"></use>
+        </svg>
+      </a>
+      
+    </div>
+
+    <!-- Hero picture -->
+     <div class="hero__container-picture"><picture>
+        <source
+          srcset="
+            ./images/mobile/ice-smile.png    1x,
+            ./images/mobile/ice-smile@2x.png 2x,
+            ./images/mobile/ice-smile@3x.png 3x
+          "
+          media="(max-width: 767px)"
+          sizes="(max-width: 767px) 170px"
+          type="image/png"
+        />
+        <source
+          srcset="
+            ./images/tablet/ice-smile.png    1x,
+            ./images/tablet/ice-smile@2x.png 2x,
+            ./images/tablet/ice-smile@3x.png 3x
+          "
+          media="(min-width: 768px) and (max-width: 1199px)"
+          sizes="(min-width: 768px) and (max-width: 1199px) 270px"
+          type="image/png"
+        />
+        <source
+          srcset="
+            ./images/desktop/ice-smile.png    1x,
+            ./images/desktop/ice-smile@2x.png 2x,
+            ./images/desktop/ice-smile@3x.png 3x
+          "
+          media="(min-width: 1200px)"
+          sizes="(min-width: 1200px) 484px"
+          type="image/png"
+        />
+        <img class="hero__picture"
+          src="./images/desktop/ice-smile.png"
+          alt="three scoops of ice cream with funny faces in a cone"
+        />
+      </picture></div>
+  </div>
+</section>

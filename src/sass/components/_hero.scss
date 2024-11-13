@@ -1,0 +1,249 @@
+.hero {
+  padding-top: 61px;
+  background-image: url('../images/mobile/dots.svg');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  height: 454px;
+  overflow: hidden;
+
+  @media screen and (min-width: $tablet) {
+    padding-top: 40px;
+    background-image: url('../images/tablet/dots.svg');
+    height: 368px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-top: 45px;
+    background-image: url('../images/desktop/dots.svg');
+    height: 574px;
+  }
+
+  &__container {
+    position: relative;
+    height: 100%;
+  }
+}
+
+// Hero top content
+.hero__top-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 28px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 42px;
+  }
+}
+
+.hero__title {
+  max-width: 247px;
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 26px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $main-text-color;
+  margin-bottom: 32px;
+  @media screen and (min-width: $tablet) {
+    max-width: 181px;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 367px;
+    font-size: 38px;
+    margin-bottom: 28px;
+  }
+
+  &--accent {
+    @media screen and (max-width: $tablet) {
+      font-size: 34px;
+      line-height: 0.965;
+    }
+    @media screen and (min-width: $tablet) and (max-width: $desktop) {
+      font-size: 24px;
+    }
+  }
+}
+
+.hero__img--many-ice {
+  width: 152px;
+  @media screen and (min-width: $desktop) {
+    width: 225px;
+  }
+}
+
+// Hero Button
+.hero__list-btn {
+  display: flex;
+  gap: 8px;
+  @media screen and (min-width: $desktop) {
+    gap: 12px;
+  }
+}
+
+.hero__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 12px;
+
+  &--border {
+    border: 2px solid $link-bg-color;
+    border-radius: 8px;
+    width: 108px;
+    color: $secondary-text-color;
+    transition: color $animation, border $animation;
+    @media screen and (min-width: $desktop) {
+      width: 134px;
+    }
+    &:hover, &:focus {
+      border: 2px solid $button-border-color;
+    }
+    &:focus {
+      color: $main-text-color;
+    }
+    &:disabled {
+      border: 2px solid $time-color;
+    }
+  }
+
+  &--no-border {
+    width: 128px;
+    text-decoration: underline;
+    text-decoration-skip-ink: none;
+    color: $link-bg-color;
+    transition: color $animation;
+    @media screen and (min-width: $desktop) {
+      width: 154px;
+    }
+    &:hover {
+      color: $button-border-color;
+    }
+    &:focus {
+      color: $main-text-color;
+    }
+    &:disabled {
+      color: $time-color;
+    }
+  }
+}
+
+// Hero right
+.hero-right {
+  @media screen and (max-width: $tablet) {
+    display: none;
+  }
+  margin-top: -10px;
+  @media screen and (min-width: $desktop) {
+    margin-top: 8px;
+  }
+
+  &__number {
+    font-weight: 900;
+    font-size: 28px;
+    letter-spacing: 0.04em;
+    text-align: right;
+    color: $secondary-text-color;
+    @media screen and (min-width: $desktop) {
+      font-size: 46px;
+    }
+  }
+
+  &__text {
+    font-size: 8px;
+    text-align: right;
+    @media screen and (min-width: $desktop) {
+      font-size: 14px;
+    }
+  }
+}
+
+// Hero bottom
+.hero__bottom {
+  &-content {
+    @media screen and (max-width: $tablet) {
+      display: none;
+    }
+    display: flex;
+    align-items: center;
+    @media screen and (min-width: $desktop) {
+      align-items: flex-end;
+    }
+  }
+
+  &-link {
+    max-width: 151px;
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.4;
+    color: $main-text-color;
+    @media screen and (min-width: $desktop) {
+      max-width: 200px;
+      font-size: 14px;
+    }
+  }
+  
+  &-text {
+    margin-bottom: 12px;
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &-img {
+    fill: $main-text-color;
+  }
+}
+
+.hero__bottom-img {
+  fill: $main-text-color;
+  transition: fill $animation;
+}
+
+.hero__bottom-link:hover .hero__bottom-img,
+.hero__bottom-link:focus .hero__bottom-img {
+  fill: $products-bg-color-yellow;
+  transition: animation-timing-function $animation;
+  animation: pulse 1s infinite;
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+.hero__img--many-ice {
+  margin-right: 33px;
+  @media screen and (min-width: $desktop) {
+    margin-right: 14px;
+  }
+}
+
+// Hero picture
+.hero__container-picture {
+  width: 170px;
+  position: absolute;
+  bottom: 0;
+  right: 30%;
+  @media screen and (min-width: $tablet) {
+    width: 270px;
+    right: 11%;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 455px;
+    right: 8%;
+  }
+}

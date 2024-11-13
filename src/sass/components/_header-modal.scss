@@ -119,31 +119,31 @@
       height: 130px;
     }
   }
-}
 
-.modal__item--cream {
-  border: 2px solid #96af8c;
-  &::before {
-    background-color: rgba(156, 190, 143, 0.7);
-    box-shadow: 0 5px 20px 0 rgba(10, 136, 23, 0.25);
+  &--cream {
+    border: 2px solid #96af8c;
+    &::before {
+      background-color: rgba(156, 190, 143, 0.7);
+      box-shadow: 0 5px 20px 0 rgba(10, 136, 23, 0.25);
+    }
   }
-}
 
-.modal__item--coffee {
-  border: 2px solid $products-bg-color-yellow;
-  box-shadow: 0 5px 20px 0 rgba(212, 20, 67, 0.1);
-  background-color: $products-bg-color-yellow;
-  &::before {
-    background-color: rgba(248, 210, 78, 0.7);
-    box-shadow: 0 5px 20px 0 rgba(153, 114, 23, 0.25);
+  &--coffee {
+    border: 2px solid $products-bg-color-yellow;
+    box-shadow: 0 5px 20px 0 rgba(212, 20, 67, 0.1);
+    background-color: $products-bg-color-yellow;
+    &::before {
+      background-color: rgba(248, 210, 78, 0.7);
+      box-shadow: 0 5px 20px 0 rgba(153, 114, 23, 0.25);
+    }
   }
-}
 
-.modal__item--milkshake {
-  border: 2px solid $products-bg-color-coffee;
-  &::before {
-    background-color: rgba(213, 117, 63, 0.7);
-    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.25);
+  &--milkshake {
+    border: 2px solid $products-bg-color-coffee;
+    &::before {
+      background-color: rgba(213, 117, 63, 0.7);
+      box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.25);
+    }
   }
 }
 
@@ -191,34 +191,35 @@
       margin-bottom: 32px;
     }
   }
+
+  &__submit {
+    border-radius: 10px;
+    min-width: 114px;
+    min-height: 42px;
+    background-color: $link-bg-color;
+    font-weight: 600;
+    font-size: 12px;
+    color: $secondary-text-color;
+    transition: color $animation, background-color $animation;
+    @media screen and (min-width: $tablet) {
+      min-width: 121px;
+      font-size: 14px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $button-border-color;
+    }
+    &:focus {
+      color: $main-text-color;
+    }
+    &:disabled {
+      background-color: $time-color;
+    }
+  }
 }
 
 .form__input::placeholder,
 .form__comment::placeholder {
   color: $secondary-text-color;
-}
-
-.form__submit {
-  border-radius: 10px;
-  min-width: 114px;
-  min-height: 42px;
-  background-color: $link-bg-color;
-  font-weight: 600;
-  font-size: 12px;
-  color: $secondary-text-color;
-  transition: color $animation, background-color $animation;
-  @media screen and (min-width: $tablet) {
-    min-width: 121px;
-    font-size: 14px;
-  }
-  &:hover,
-  &:focus {
-    background-color: $button-border-color;
-  }
-  &:focus {
-    color: $main-text-color;
-  }
-  &:disabled {
-    background-color: $time-color;
-  }
 }
