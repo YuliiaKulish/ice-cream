@@ -1,0 +1,44 @@
+@use '../utils/vars' as *;
+
+.about-modal {
+  padding: 26px;
+  max-height: 459px;
+  @media screen and (min-width: $tablet) {
+    max-height: 449px;
+    padding: 32px 50px;
+  }
+
+  &__title {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    @media screen and (min-width: $tablet) {
+      font-size: 20px;
+      line-height: 1.4;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__frame {
+    width: 224px;
+    height: 199px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    @media screen and (min-width: $tablet) {
+      width: 440px;
+      height: 205px;
+      margin-bottom: 32px;
+    }
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+    color: #131313;
+    @media screen and (min-width: $tablet) {
+      font-size: 16px;
+    }
+  }
+}

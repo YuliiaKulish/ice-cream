@@ -1,4 +1,3 @@
-@use './utils/normalize';
 @use './utils/reset';
 @use './utils/common';
 @use './utils/cursor';
@@ -7,3 +6,5 @@
 @use './components/hero';
 @use './components/products';
 @use './components/products-modal';
+@use './components/about';
+@use './components/about-modal';

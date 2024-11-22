@@ -181,11 +181,13 @@
 // Header button modal
 .header__button {
   min-width: 152px;
+
   @media screen and (max-width: $tablet) {
     display: none;
   }
 
   &--mobile {
+    min-width: 152px;
     margin: auto;
     margin-bottom: 0;
     @media screen and (min-width: $tablet) {
