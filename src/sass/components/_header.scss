@@ -1,3 +1,5 @@
+@use '../utils/vars' as *;
+
 .header__container {
   display: flex;
   align-items: center;
@@ -82,10 +84,11 @@
   &__link {
     padding: 14px 0;
     transition: color $animation;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: $link-bg-color;
     }
-  }  
+  }
 }
 
 /* Burger-icon */
@@ -110,7 +113,7 @@
   padding: 100px 40px 63px;
   transform: translateX(100%);
   transition: transform $animation;
-  z-index: 1001;
+  z-index: 1000;
   overflow-y: auto;
   @media screen and (min-width: $tablet) {
     padding-top: 140px;
@@ -138,7 +141,7 @@
     font-weight: 700;
     font-size: 32px;
     text-align: center;
-  
+
     &:not(:last-child) {
       margin-bottom: 32px;
     }
@@ -153,7 +156,8 @@
 
   &__link {
     transition: color $animation;
-    &:hover, &:focus {
+    &:hover,
+    &:focus {
       color: $secondary-text-color;
     }
   }
@@ -174,23 +178,9 @@
   }
 }
 
-// Open modal btn
-.open-modal-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 600;
-  font-size: 14px;
-  border-radius: 10px;
-  min-width: 152px;
-  min-height: 42px;
-  color: $secondary-text-color;
-  background-color: $link-bg-color;
-}
-
 // Header button modal
 .header__button {
-  transition: color $animation, background-color $animation;
+  min-width: 152px;
   @media screen and (max-width: $tablet) {
     display: none;
   }
@@ -209,17 +199,7 @@
     transition: stroke $animation;
   }
 
-  &:hover, &:focus {
-    background-color: $button-border-color;
-  }
-  &:focus {
-    color: $main-text-color;
-  }
-  &:disabled {
-    background-color: $time-color;
-  }
-}
-
-.header__button:focus .header__button-img {
+  &:focus .header__button-img {
     stroke: $main-text-color;
+  }
 }

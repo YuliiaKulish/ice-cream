@@ -1,0 +1,259 @@
+@use '../utils/vars' as *;
+
+.products {
+  background-color: #ffffff;
+  background-image: url('../images/mobile/product-bg.svg');
+  background-size: cover;
+  
+  @media screen and (max-width: $tablet) {
+    background-size: contain;
+  }
+  @media screen and (min-width: $tablet) {
+    background-image: url('../images/tablet/product-bg.svg');
+  }
+  @media screen and (min-width: $desktop) {
+    background-image: url('../images/desktop/product-bg.svg');
+  }
+
+  &__subtitle {
+    color: $secondary-text-color;
+  }
+  &__title {
+    color: $secondary-text-color;
+    margin-bottom: 148px;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 200px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 300px;
+    }
+  }
+}
+
+.product__list {
+  display: flex;
+  @media screen and (max-width: $tablet) {
+    flex-direction: column;
+    align-items: center;
+    gap: 164px;
+  }
+  @media screen and (min-width: $tablet) {
+    justify-content: space-between;
+  }
+}
+
+.product__item {
+  position: relative;
+  border-radius: 24px;
+  width: 280px;
+  height: 420px;
+  box-shadow: 0 8px 30px 0 rgba(212, 20, 67, 0.1);
+  padding: 123px 40px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media screen and (min-width: $tablet) {
+    border-radius: 16px;
+    height: 428px;
+    flex-basis: calc((100% - 32px) / 3);
+    max-width: 224px;
+    padding: 107px 26px 12px;
+  }
+  @media screen and (min-width: $desktop) {
+    border-radius: 24px;
+    flex-basis: calc((100% - 60px) / 3);
+    max-width: 370px;
+    height: 535px;
+    padding: 166px 63px 30px;
+  }
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
+
+  &::before {
+    top: 0%;
+    left: 50%;
+    @media screen and (min-width: $tablet) {
+      top: -9px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 300px;
+      height: 300px;
+      top: -13px;
+    }
+  }
+
+  &::after {
+    top: -11px;
+    left: 50%;
+    background-size: cover;
+    @media screen and (min-width: $tablet) {
+      top: -20px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 300px;
+      height: 300px;
+      top: -30px;
+    }
+  }
+
+  &--cream {
+    background-color: #aec6a5;
+    &::before {
+      background-color: rgba(156, 190, 143, 0.7);
+      box-shadow: 0 8px 30px 0 rgba(10, 136, 23, 0.25);
+    }
+    &::after {
+      background-image: image-set(
+        url('../images/mobile/ice-product.png') 1x,
+        url('../images/mobile/ice-product@2x.png') 2x,
+        url('../images/mobile/ice-product@3x.png') 3x
+      );
+      @media screen and (min-width: $tablet) {
+        background-image: image-set(
+          url('../images/tablet/ice-product.png') 1x,
+          url('../images/tablet/ice-product@2x.png') 2x,
+          url('../images/tablet/ice-product@3x.png') 3x
+        );
+      }
+      @media screen and (min-width: $desktop) {
+        background-image: image-set(
+          url('../images/desktop/ice-product.png') 1x,
+          url('../images/desktop/ice-product@2x.png') 2x,
+          url('../images/desktop/ice-product@3x.png') 3x
+        );
+      }
+    }
+  }
+
+  &--coffee {
+    background-color: #efd478;
+    &::before {
+      background-color: rgba(248, 210, 78, 0.7);
+      box-shadow: 0 8px 30px 0 rgba(153, 114, 23, 0.25);
+    }
+    &::after {
+      background-image: image-set(
+        url('../images/mobile/coffee-product.png') 1x,
+        url('../images/mobile/coffee-product@2x.png') 2x,
+        url('../images/mobile/coffee-product@3x.png') 3x
+      );
+      @media screen and (min-width: $tablet) {
+        background-image: image-set(
+          url('../images/tablet/coffee-product.png') 1x,
+          url('../images/tablet/coffee-product@2x.png') 2x,
+          url('../images/tablet/coffee-product@3x.png') 3x
+        );
+      }
+      @media screen and (min-width: $desktop) {
+        background-image: image-set(
+          url('../images/desktop/coffee-product.png') 1x,
+          url('../images/desktop/coffee-product@2x.png') 2x,
+          url('../images/desktop/coffee-product@3x.png') 3x
+        );
+      }
+    }
+  }
+
+  &--milkshake {
+    background-color: #d6936d;
+    &::before {
+      background-color: rgba(213, 117, 63, 0.7);
+      box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.25);
+    }
+    &::after {
+      background-image: image-set(
+        url('../images/mobile/milk-product.png') 1x,
+        url('../images/mobile/milk-product@2x.png') 2x,
+        url('../images/mobile/milk-product@3x.png') 3x
+      );
+      @media screen and (min-width: $tablet) {
+        background-image: image-set(
+          url('../images/tablet/milk-product.png') 1x,
+          url('../images/tablet/milk-product@2x.png') 2x,
+          url('../images/tablet/milk-product@3x.png') 3x
+        );
+      }
+      @media screen and (min-width: $desktop) {
+        background-image: image-set(
+          url('../images/desktop/milk-product.png') 1x,
+          url('../images/desktop/milk-product@2x.png') 2x,
+          url('../images/desktop/milk-product@3x.png') 3x
+        );
+      }
+    }
+  }
+}
+
+.product__desc {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #131313;
+  margin-bottom: 40px;
+  @media screen and (min-width: $tablet) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 30px;
+    margin-bottom: 65px;
+  }
+}
+
+.product__text {
+  font-family: $font-family;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.76;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #131313;
+  @media screen and (min-width: $tablet) {
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+  }
+}
+
+.product__button {
+  width: 170px;
+  height: 60px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  padding: 0;
+  fill: $secondary-text-color;
+  transition: fill $animation;
+  display: flex;
+
+  &:hover, &:focus {
+    fill: $main-text-color;
+  transition: animation-timing-function $animation;
+  animation: pulse 1s infinite;
+
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  }
+}

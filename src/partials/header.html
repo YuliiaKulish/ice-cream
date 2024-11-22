@@ -38,7 +38,7 @@
       <span class="logo__text">ce</span>
     </a>
     <!-- Button tab-mob -->
-    <button class="burger-icon" id="burgerIcon" type="button">
+    <button class="burger-icon" id="burgerIcon" aria-label="Open menu" type="button">
       <svg width="32" height="32">
         <use href="./images/icons.svg#icon-burger"></use>
       </svg>
@@ -81,28 +81,28 @@
           </picture>
           <span class="logo__text">ce</span>
       </a>
-      <button class="close-burger" id="closeBurger" type="button">
+      <button class="close-burger" id="closeBurger" aria-label="Close menu" type="button">
         <svg class="close-burger__img" width="32" height="32">
           <use href="./images/icons.svg#icon-cross"></use>
         </svg>
       </button>
-      <nav class="burger-menu__nav">
+      <nav class="burger-menu__nav" aria-label="Main navigation">
         <ul class="burger-menu__list">
           <li class="burger-menu__item">
             <a class="burger-menu__link" href="#home">Home</a>
           </li>
           <li class="burger-menu__item">
-            <a class="burger-menu__link" href="#">How it’s made?</a>
+            <a class="burger-menu__link" href="#about">How it’s made?</a>
           </li>
           <li class="burger-menu__item">
-            <a class="burger-menu__link" href="#">Our products</a>
+            <a class="burger-menu__link" href="#products">Our products</a>
           </li>
           <li class="burger-menu__item">
-            <a class="burger-menu__link" href="#">Contact</a>
+            <a class="burger-menu__link" href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
-      <button class="open-modal-btn header__button--mobile" data-modal="modal1" type="button">
+      <button class="open-modal-btn header__button--mobile" aria-label="Buy now" data-modal-id="modal1" type="button">
         Buy now
         <svg class="header__button-img" width="12" height="12">
           <use href="./images/icons.svg#icon-needle"></use>
@@ -110,27 +110,24 @@
       </button>
     </div>
     <!-- Desk nav -->
-    <nav class="nav">
+    <nav class="nav" aria-label="Main navigation">
       <ul class="nav__list">
         <li class="nav__item"><a class="nav__link" href="#home">Home</a></li>
         <li class="nav__item">
-          <a class="nav__link" href="#">How it’s made?</a>
+          <a class="nav__link" href="#about">How it’s made?</a>
         </li>
         <li class="nav__item">
-          <a class="nav__link" href="#">Our products</a>
+          <a class="nav__link" href="#products">Our products</a>
         </li>
-        <li class="nav__item"><a class="nav__link" href="#">Contact</a></li>
+        <li class="nav__item"><a class="nav__link" href="#contact">Contact</a></li>
       </ul>
     </nav>
     <!-- Buy now -->
-    <button class="open-modal-btn header__button" data-modal="modal1" type="button">
+    <button class="open-modal-btn header__button" aria-label="Buy now" data-modal-id="modal1" type="button">
       Buy now
       <svg class="header__button-img" width="12" height="12">
         <use href="./images/icons.svg#icon-needle"></use>
       </svg>
     </button>
   </div>
-
-
-  <div class="overlay" id="overlay"></div>
 </header>

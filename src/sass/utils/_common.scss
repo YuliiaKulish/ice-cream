@@ -1,10 +1,14 @@
-@import '~node_modules/modern-normalize/modern-normalize.css';
+@use './vars' as *;
 
 body {
   color: $main-text-color;
   background-color: $main-bg-color;
 
   font-family: $font-family;
+  /* Блокування прокрутки */
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 .visually-hidden {
@@ -46,14 +50,196 @@ body {
   padding-bottom: 60px;
 }
 
-/* Overlay */
-.overlay {
+.title {
+  font-family: $second-family;
+  font-weight: 400;
+  font-size: 30px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: center;
+  @media screen and (min-width: $tablet) {
+    font-size: 34px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 36px;
+  }
+}
+
+.subtitle {
+  font-family: $font-family;
+  font-weight: 800;
+  font-size: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 12px;
+  @media screen and (min-width: $tablet) {
+    font-size: 22px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 30px;
+    letter-spacing: 0.04em;
+  }
+}
+
+// Open modal button
+.open-modal-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 14px;
+  border-radius: 10px;
+  min-height: 42px;
+  color: $secondary-text-color;
+  background-color: $link-bg-color;
+  transition: color $animation, background-color $animation;
+  &:hover, &:focus {
+    background-color: $button-border-color;
+  }
+  &:focus {
+    color: $main-text-color;
+  }
+  &:disabled {
+    background-color: $time-color;
+  }
+}
+
+// Modal
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid $link-bg-color;
+  border-radius: 10px;
+  background-color: $main-text-color;
+  opacity: 0;
+  visibility: hidden;
+  height: 100%;
+  max-width: 280px;
+  overflow-y: auto;
   display: none;
+  z-index: 1003;
+  transition: opacity $animation, visibility $animation;
+  @media screen and (min-width: $tablet) {
+    max-width: 568px;
+  }
+
+  &.show {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &__title {
+    font-family: $second-family;
+    color: $secondary-text-color;
+  }
+}
+
+// Close modal button
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  fill: $secondary-text-color;
+  &__img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+// Form
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  &__input {
+    width: 100%;
+    background-color: rgba(248, 210, 78, 0.1);
+    margin-bottom: 12px;
+    padding: 8px 12px;
+    font-size: 12px;
+    height: 42px;
+    line-height: 1.4;
+    border: 1px solid $main-bg-color;
+    border-radius: 10px;
+    background: rgba(248, 210, 78, 0.1);
+    @media screen and (min-width: 768px) {
+      width: 368px;
+      margin-bottom: 16px;
+      padding: 11px 16px;
+    }
+  }
+
+  &__comment {
+    resize: none;
+    height: 84px;
+    margin-bottom: 24px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &__submit {
+    border-radius: 10px;
+    min-width: 114px;
+    min-height: 42px;
+    background-color: $link-bg-color;
+    font-weight: 600;
+    font-size: 12px;
+    color: $secondary-text-color;
+    transition: color $animation, background-color $animation;
+    @media screen and (min-width: $tablet) {
+      min-width: 121px;
+      font-size: 14px;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $button-border-color;
+    }
+    &:focus {
+      color: $main-text-color;
+    }
+    &:disabled {
+      background-color: $time-color;
+    }
+  }
+}
+
+.form__input::placeholder,
+.form__comment::placeholder {
+  color: $secondary-text-color;
+}
+
+/* Загальні стилі для overlay */
+.overlay {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
   z-index: 999;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Стиль для оверлею, коли він активний */
+.overlay.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Стиль для оверлею, коли він накладається поверх бургер-меню */
+.overlay.on-top {
+  z-index: 1000;
 }

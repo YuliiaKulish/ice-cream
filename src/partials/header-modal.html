@@ -1,13 +1,19 @@
-<div class="modal" id="modal1">
-  <button class="close-btn" id="closeBurgerMenu" type="button">
+<div class="modal header-modal" id="modal1" aria-labelledby="modalTitle">
+  <button
+    class="close-btn"
+    id="closeBurgerMenu"
+    aria-label="Close modal"
+    type="button"
+  >
     <svg class="close-btn__img">
       <use href="./images/icons.svg#icon-cross"></use>
     </svg>
   </button>
-  <p class="modal__title">Buy now</p>
+  <p class="header-modal__title modal__title" id="modalTitle">Buy now</p>
   <!-- List food -->
-  <ul class="modal__list">
-    <li class="modal__item modal__item--cream">Ice cream
+  <ul class="header-modal__list">
+    <li class="header-modal__item header-modal__item--cream">
+      Ice cream
       <picture>
         <source
           srcset="
@@ -17,10 +23,15 @@
           "
           type="image/png"
         />
-        <img class="modal__img" src="./images/ice-cream.png" alt="Ice cream" />
+        <img
+          class="header-modal__img"
+          src="./images/ice-cream.png"
+          alt="Ice cream"
+        />
       </picture>
     </li>
-    <li class="modal__item modal__item--coffee">Ice coffee
+    <li class="header-modal__item header-modal__item--coffee">
+      Ice coffee
       <picture>
         <source
           srcset="
@@ -31,13 +42,14 @@
           type="image/png"
         />
         <img
-          class="modal__img"
+          class="header-modal__img"
           src="./images/ice-coffee.png"
           alt="Ice coffee"
         />
       </picture>
     </li>
-    <li class="modal__item modal__item--milkshake">Milkshake
+    <li class="header-modal__item header-modal__item--milkshake">
+      Milkshake
       <picture>
         <source
           srcset="
@@ -47,24 +59,40 @@
           "
           type="image/png"
         />
-        <img class="modal__img" src="./images/milkshake.png" alt="Milkshake" />
+        <img
+          class="header-modal__img"
+          src="./images/milkshake.png"
+          alt="Milkshake"
+        />
       </picture>
     </li>
   </ul>
   <!-- Form -->
   <form class="form">
-    <input class="form__input" type="text" name="username" placeholder="Name" />
+    <input
+      class="form__input"
+      type="text"
+      name="username"
+      aria-label="Your name"
+      required
+      placeholder="Name"
+    />
     <input
       class="form__input"
       type="tel"
       name="phone_number"
+      aria-label="Your phone number"
+      required
       placeholder="Phone"
     />
     <textarea
       class="form__comment form__input"
       name="comment"
+      aria-label="Your comment"
       placeholder="Comment"
     ></textarea>
-    <button class="form__submit" type="submit">Submit</button>
+    <button class="form__submit" aria-label="Submit your order" type="submit">
+      Submit
+    </button>
   </form>
 </div>

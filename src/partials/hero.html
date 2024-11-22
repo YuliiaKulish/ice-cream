@@ -1,19 +1,19 @@
-<section class="hero">
+<section class="hero" aria-labelledby="heroTitle">
   <div class="container hero__container">
 
         <!--Hero top content -->
     <div class="hero__top-content">
       <div class="hero-left">
-        <h1 class="hero__title">
+        <h1 class="hero__title" id="heroTitle">
           ice cream made with <span class="hero__title--accent">passion</span>
         </h1>
         <!-- button -->
         <ul class="hero__list-btn">
           <li class="hero__item-btn">
-            <a class="hero__button hero__button--border" href="#products">Products</a>
+            <a class="hero__button hero__button--border" href="#products" aria-label="View our products">Products</a>
           </li>
           <li class="hero__item-btn">
-            <a class="hero__button hero__button--no-border" href="#howItsMade"
+            <a class="hero__button hero__button--no-border" href="#about" aria-label="Learn how it's made"
               >How it’s made?</a
             >
           </li>
@@ -38,9 +38,9 @@
       <picture>
         <source
           srcset="
-            ./images/tablet/many-ice.png    1x,
-            ./images/tablet/many-ice@2x.png 2x,
-            ./images/tablet/many-ice@3x.png 3x
+            ./images/tablet/many-ice.png    152w,
+            ./images/tablet/many-ice@2x.png 304w,
+            ./images/tablet/many-ice@3x.png 456w
           "
           media="(max-width: 1199px)"
           sizes="(max-width: 1199px) 152px"
@@ -48,9 +48,9 @@
         />
         <source
           srcset="
-            ./images/desktop/many-ice.png    1x,
-            ./images/desktop/many-ice@2x.png 2x,
-            ./images/desktop/many-ice@3x.png 3x
+            ./images/desktop/many-ice.png    225w,
+            ./images/desktop/many-ice@2x.png 450w,
+            ./images/desktop/many-ice@3x.png 675w
           "
           media="(min-width: 1200px)"
           sizes="(min-width: 1200px) 225px"

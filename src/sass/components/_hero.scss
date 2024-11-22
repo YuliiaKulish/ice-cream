@@ -1,3 +1,5 @@
+@use '../utils/vars' as *;
+
 .hero {
   padding-top: 61px;
   background-image: url('../images/mobile/dots.svg');
@@ -135,10 +137,11 @@
 
 // Hero right
 .hero-right {
+  margin-top: -10px;
   @media screen and (max-width: $tablet) {
     display: none;
   }
-  margin-top: -10px;
+
   @media screen and (min-width: $desktop) {
     margin-top: 8px;
   }
@@ -166,11 +169,12 @@
 // Hero bottom
 .hero__bottom {
   &-content {
+    display: flex;
+    align-items: center;
     @media screen and (max-width: $tablet) {
       display: none;
     }
-    display: flex;
-    align-items: center;
+
     @media screen and (min-width: $desktop) {
       align-items: flex-end;
     }
