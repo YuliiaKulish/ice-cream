@@ -1,0 +1,114 @@
+@use '../utils/vars' as *;
+
+.advantages {
+  padding-bottom: 60px;
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 204px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 180px;
+  }
+  &__list {
+    display: flex;
+    @media screen and (max-width: $tablet) {
+        flex-direction: column;
+    align-items: center;
+    }
+    @media screen and (min-width: $tablet) {
+        justify-content: space-between;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    @media screen and (min-width: $mobile) {
+      max-width: 420px;
+    }
+    @media screen and (min-width: $tablet) {
+        max-width: 152px;
+      }
+      @media screen and (min-width: $desktop) {
+        max-width: 280px;
+      }
+
+    &:not(:last-child) {
+        @media screen and (max-width: $tablet) {
+            margin-bottom: 35px;
+        }
+    }
+
+    &::before {
+      content: '';
+      display: flex;
+      border-radius: 25px;
+      width: 50px;
+      height: 50px;
+      background-color: $link-bg-color;
+      background-size: 36px;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-bottom: 16px;
+    }
+    &--cow::before {
+      background-image: image-set(
+        url('../images/cow.png') 1x,
+        url('../images/cow@2x.png') 2x,
+        url('../images/cow@3x.png') 3x
+      );
+    }
+    &--weight::before {
+      background-image: image-set(
+        url('../images/weight.png') 1x,
+        url('../images/weight@2x.png') 2x,
+        url('../images/weight@3x.png') 3x
+      );
+    }
+    &--ice::before {
+      background-image: image-set(
+        url('../images/ice-crema.png') 1x,
+        url('../images/ice-crema@2x.png') 2x,
+        url('../images/ice-crema@3x.png') 3x
+      );
+    }
+  }
+
+  &__number {
+    font-family: $font3;
+    font-weight: 700;
+    font-size: 36px;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fcfcfc;
+    margin-bottom: 18px;
+    @media screen and (max-width: $tablet) {
+        text-transform: uppercase;
+      }
+    @media screen and (min-width: $tablet) {
+      font-size: 48px;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 58px;
+    }
+  }
+
+  &__text {
+    font-family: $font-family;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.7;
+    text-align: center;
+    color: #fcfcfc;
+    @media screen and (min-width: $tablet) {
+        font-weight: 400;
+      font-size: 14px;
+      line-height: 1.74;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 16px;
+      line-height: 1.76;
+    }
+  }
+}
