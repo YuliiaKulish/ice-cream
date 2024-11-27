@@ -1,12 +1,12 @@
 @use '../utils/vars' as *;
 
 .advantages {
-  padding-bottom: 60px;
+  padding-bottom: 36px;
   @media screen and (min-width: $tablet) {
-    padding-bottom: 204px;
+    padding-bottom: 40px;
   }
   @media screen and (min-width: $desktop) {
-    padding-bottom: 180px;
+    padding-bottom: 86px;
   }
   &__list {
     display: flex;

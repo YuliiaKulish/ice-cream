@@ -1,0 +1,38 @@
+@use '../utils/vars' as *;
+
+.swiper {
+  max-height: 230px;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  @media screen and (min-width: $tablet) {
+    max-height: 330px;
+  }
+  @media screen and (min-width: $desktop) {
+    max-height: 500px;
+  }
+}
+
+.gallery {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    width: 100vw;
+    height: 1050px;
+    background-color: #ffffff;
+    background-image: url('../images/mobile/product-bg.svg');
+    background-size: cover;
+    @media screen and (min-width: $tablet) {
+      background-image: url('../images/tablet/product-bg.svg');
+      height: 958px;
+      top: 164px;
+    }
+    @media screen and (min-width: $desktop) {
+      background-image: url('../images/desktop/product-bg.svg');
+      height: 1020px;
+      top: 98px;
+    }
+  }
+}
