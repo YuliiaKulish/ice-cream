@@ -67,7 +67,7 @@ closeModalButtons.forEach(button => {
 // Закриття модалки при кліку на overlay
 overlay.addEventListener('click', () => {
   const openModals = document.querySelectorAll('.modal.show');
-  
+
   if (openModals.length > 0) {
     // Якщо є відкриті модалки, закриваємо їх
     openModals.forEach(modal => {
@@ -77,7 +77,11 @@ overlay.addEventListener('click', () => {
         const productPict = document.getElementById('product-pict');
 
         // Видаляємо класи nutrition-style при натисканні на оверлей
-        productPict.classList.remove('product-pict-style-1', 'product-pict-style-2', 'product-pict-style-3');
+        productPict.classList.remove(
+          'product-pict-style-1',
+          'product-pict-style-2',
+          'product-pict-style-3'
+        );
       }
 
       // Закриваємо модалку
@@ -90,7 +94,6 @@ overlay.addEventListener('click', () => {
     }
   }
 });
-
 
 // Обробник для бургер-меню
 burgerIcon.addEventListener('click', () => {
@@ -108,7 +111,6 @@ document.querySelectorAll('.burger-menu__link').forEach(anchor => {
 });
 
 burgerLogo.addEventListener('click', closeBurgerMenu);
-
 
 // Отримання картинок
 import iceUrl from '../images/ice-cream@2x.png';
@@ -221,7 +223,11 @@ function openProductModal(event) {
     .join('');
 
   // Додавання різних стилів для nutrition залежно від id товару
-  nutritionList.classList.remove('nutrition-style-1', 'nutrition-style-2', 'nutrition-style-3');
+  nutritionList.classList.remove(
+    'nutrition-style-1',
+    'nutrition-style-2',
+    'nutrition-style-3'
+  );
 
   if (product.id === 1) {
     nutritionList.classList.add('nutrition-style-1');
@@ -233,7 +239,11 @@ function openProductModal(event) {
 
   // Додавання різних стилів для modal-pictures залежно від id товару
   const productPict = document.getElementById('product-pict');
-  productPict.classList.remove('nutrition-style-1', 'nutrition-style-2', 'nutrition-style-3');
+  productPict.classList.remove(
+    'nutrition-style-1',
+    'nutrition-style-2',
+    'nutrition-style-3'
+  );
 
   if (product.id === 1) {
     productPict.classList.add('product-pict-style-1');
@@ -252,10 +262,18 @@ function closeProductModal() {
   const nutritionList = document.getElementById('nutrition-list');
 
   // Видаляємо класи nutrition-style при закритті модалки
-  nutritionList.classList.remove('nutrition-style-1', 'nutrition-style-2', 'nutrition-style-3');
+  nutritionList.classList.remove(
+    'nutrition-style-1',
+    'nutrition-style-2',
+    'nutrition-style-3'
+  );
 
   const productPict = document.getElementById('product-pict');
-  productPict.classList.remove('product-pict-style-1', 'product-pict-style-2', 'product-pict-style-3');
+  productPict.classList.remove(
+    'product-pict-style-1',
+    'product-pict-style-2',
+    'product-pict-style-3'
+  );
   // Закриваємо модалку
   closeModal(document.getElementById('product-modal'));
 }
@@ -266,7 +284,9 @@ document.querySelectorAll('.open-product-btn').forEach(button => {
 });
 
 // Додаємо слухач події для закриття модалки
-document.getElementById('closeProductModal').addEventListener('click', closeProductModal);
+document
+  .getElementById('closeProductModal')
+  .addEventListener('click', closeProductModal);
 
 // Додано обробник для плавного прокручування до розділів з будь-якого місця
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -289,3 +309,59 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+
+// // Swiper 
+// // Отримуємо доступ до swiper-container в Shadow DOM
+// const swiperContainer = document.querySelector('.reviews__swiper');
+// const shadowRoot = swiperContainer.shadowRoot;  // Отримуємо доступ до #shadow-root
+
+// // Отримуємо всі елементи пагінації
+// const pagination = shadowRoot.querySelector('.swiper-pagination');
+
+// // Стилізуємо всі елементи пагінації
+// const paginationBullets = pagination.querySelectorAll('.swiper-pagination-bullet');
+
+// // Додаємо стилі для активного та пасивного стану пагінації
+// paginationBullets.forEach(bullet => {
+//   // Стилі для пасивного стану
+//   bullet.style.borderRadius = '100%';
+//   bullet.style.width = '12px';
+//   bullet.style.height = '12px';
+//   bullet.style.color = '#d9d9d9'; // Пасивний колір
+
+//   // Слухач подій для зміни на активний стан
+//   bullet.addEventListener('mouseenter', () => {
+//     bullet.style.color = '#84a178'; // Активний колір
+//   });
+
+//   bullet.addEventListener('mouseleave', () => {
+//     bullet.style.color = '#d9d9d9'; // Пасивний колір
+//   });
+// });
+
+// // Для того, щоб забезпечити зміну стилю, коли пагінація активна (по кліку)
+// const activePaginationBullet = shadowRoot.querySelector('.swiper-pagination-bullet-active');
+// if (activePaginationBullet) {
+//   activePaginationBullet.style.color = '#84a178'; // Активний колір
+// }
+
+// // Додаємо відступ для пагінації в залежності від розміру екрану
+// function updatePaginationMargin() {
+//   const screenWidth = window.innerWidth;
+
+//   // Встановлюємо відступ для мобільних екранів (до 767px)
+//   if (screenWidth <= 767) {
+//     pagination.style.marginBottom = '14px'; // Відступ 14px для мобільних
+//   }
+//   // Встановлюємо відступ для більших екранів (понад 768px)
+//   else if (screenWidth > 768) {
+//     pagination.style.marginBottom = '32px'; // Відступ 32px для десктопних екранів
+//   }
+// }
+
+// // Оновлюємо відступ при завантаженні сторінки
+// updatePaginationMargin();
+
+// // Оновлюємо відступ при зміні розміру вікна
+// window.addEventListener('resize', updatePaginationMargin);

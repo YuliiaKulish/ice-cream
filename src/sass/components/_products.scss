@@ -1,7 +1,7 @@
 @use '../utils/vars' as *;
 
 .products {
-  background-color: #ffffff;
+  background-color: $accent-bg-color;
   background-image: url('../images/mobile/product-bg.svg');
   background-size: cover;
   
@@ -106,7 +106,7 @@
   }
 
   &--cream {
-    background-color: #aec6a5;
+    background-color: $products-bg-color-green;
     &::before {
       background-color: rgba(156, 190, 143, 0.7);
       box-shadow: 0 8px 30px 0 rgba(10, 136, 23, 0.25);
@@ -135,7 +135,7 @@
   }
 
   &--coffee {
-    background-color: #efd478;
+    background-color: $products-bg-color-yellow;
     &::before {
       background-color: rgba(248, 210, 78, 0.7);
       box-shadow: 0 8px 30px 0 rgba(153, 114, 23, 0.25);
@@ -164,7 +164,7 @@
   }
 
   &--milkshake {
-    background-color: #d6936d;
+    background-color: $products-bg-color-coffee;
     &::before {
       background-color: rgba(213, 117, 63, 0.7);
       box-shadow: 0 8px 30px 0 rgba(0, 0, 0, 0.25);
@@ -200,7 +200,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   text-align: center;
-  color: #131313;
+  color: $secondary-text-color;
   margin-bottom: 40px;
   @media screen and (min-width: $tablet) {
     font-size: 22px;
@@ -218,7 +218,7 @@
   line-height: 1.76;
   letter-spacing: 0.04em;
   text-align: center;
-  color: #131313;
+  color: $secondary-text-color;
   @media screen and (min-width: $tablet) {
   }
   @media screen and (min-width: $desktop) {
