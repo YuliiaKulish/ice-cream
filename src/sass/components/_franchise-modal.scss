@@ -1,0 +1,32 @@
+@use '../utils/vars' as *;
+
+.franchise-modal {
+  padding: 30px 26px;
+  max-height: 365px;
+  @media screen and (min-width: $tablet) {
+    padding: 31px 50px;
+    max-height: 674px;
+  }
+  &__title {
+    line-height: 1.5;
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 322px;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 32px;
+      font-size: 20px;
+      line-height: 1.4;
+      margin-bottom: 24px;
+    }
+  }
+  &__text {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #131313;
+    margin-bottom: 24px;
+    @media screen and (min-width: $tablet) {
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+  }
+}

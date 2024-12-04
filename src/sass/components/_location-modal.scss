@@ -1,0 +1,42 @@
+@use '../utils/vars' as *;
+
+.location-modal {
+  padding: 30px 26px;
+  max-width: 280px;
+  max-height: 365px;
+  @media screen and (min-width: $tablet) {
+    padding: 31px 50px;
+    max-width: 568px;
+    max-height: 460px;
+  }
+  &__title {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 32px;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+  }
+  &__btn {
+    min-width: 134px;
+    @media screen and (min-width: $tablet) {
+      min-width: 145px;
+    }
+  }
+}
+
+.modal__frame {
+  max-width: 224px;
+  min-height: 199px;
+  border: none;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  @media screen and (min-width: $tablet) {
+    max-width: 448px;
+    min-height: 260px;
+    margin-bottom: 32px;
+  }
+}

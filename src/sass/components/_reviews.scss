@@ -88,6 +88,7 @@ swiper-container::part(bullet) {
   width: 12px;
   height: 12px;
   margin: 0;
+  cursor: url('../images/cursor-black.svg'), pointer;
 }
 
 swiper-container::part(bullet-active) {
@@ -95,4 +96,5 @@ swiper-container::part(bullet-active) {
   height: 12px;
   background-color: $main-bg-color;
   margin: 0;
+  cursor: url('../images/cursor-black.svg'), pointer;
 }

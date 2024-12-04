@@ -1,0 +1,201 @@
+@use '../utils/vars' as *;
+
+.contacts {
+  padding-bottom: 40px;
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 120px;
+  }
+}
+
+.contacts__list {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  gap: 20px;
+  @media screen and (max-width: $tablet) {
+    flex-direction: column;
+  }
+  @media screen and (min-width: $tablet) {
+    gap: 16px;
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $desktop) {
+    gap: 32px;
+    margin-bottom: 64px;
+  }
+}
+
+.contacts__item {
+  box-shadow: 0 8px 30px 0 rgba(212, 20, 67, 0.1);
+  background-color: #fff;
+  border-radius: 24px;
+  padding: 40px 32px;
+  max-width: 280px;
+
+  @media screen and (min-width: $tablet) {
+    max-width: 224px;
+    padding: 40px 24px;
+  }
+  @media screen and (min-width: $desktop) {
+    max-width: 368px;
+    padding: 40px;
+  }
+}
+
+.contacts-info {
+  padding-bottom: 24px;
+  @media screen and (min-width: $tablet) {
+    padding-bottom: 26px;
+  }
+  &__name {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+    color: #131313;
+    background: #f8d24e;
+    margin-bottom: 20px;
+    display: inline-block;
+    padding: 4px 14px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    @media screen and (min-width: $tablet) {
+      font-size: 16px;
+      margin-bottom: 32px;
+    }
+  }
+  &__localion-name {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+    color: #131313;
+    margin-bottom: 8px;
+    @media screen and (min-width: $tablet) {
+      font-size: 14px;
+      margin-bottom: 12px;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+  }
+  &__location {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.83;
+    letter-spacing: 0.04em;
+    color: #d6936d;
+    @media screen and (min-width: $tablet) {
+      font-size: 14px;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 16px;
+    }
+  }
+}
+
+.contacts-shedule {
+  padding: 24px 0;
+  border-top: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
+  @media screen and (min-width: $tablet) {
+    padding: 32px 0;
+  }
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
+  &__days {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+    color: #131313;
+    @media screen and (min-width: $tablet) {
+      font-size: 14px;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 16px;
+    }
+  }
+  &__time {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.86;
+    color: #ababab;
+    @media screen and (min-width: $tablet) {
+      font-size: 14px;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 16px;
+    }
+  }
+}
+
+.contacts {
+  &__contacts {
+    padding-top: 24px;
+    @media screen and (min-width: $tablet) {
+      padding-top: 30px;
+    }
+  }
+  &__number,
+  &__mail {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #131313;
+    @media screen and (min-width: $tablet) {
+      font-size: 14px;
+      line-height: 1.83;
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 16px;
+    }
+  }
+}
+
+.contacts__list-btn {
+  display: flex;
+  gap: 16px;
+  @media screen and (max-width: $tablet) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (min-width: $tablet) {
+    justify-content: center;
+  }
+}
+
+.contacts__btn {
+  min-width: 196px;
+  &-img {
+    margin-left: 7px;
+    stroke: $secondary-text-color;
+    transition: stroke $animation;
+  }
+  &:focus .contacts__btn-img {
+    stroke: $main-text-color;
+  }
+  &-border {
+    background-color: transparent;
+    border: 2px solid $link-bg-color;
+    border-radius: 8px;
+    color: $secondary-text-color;
+    transition: color $animation, border $animation;
+    &:hover,
+    &:focus {
+      border: 2px solid $button-border-color;
+      background-color: transparent;
+    }
+    &:focus {
+      color: $main-text-color;
+      background-color: transparent;
+    }
+    &:disabled {
+      border: 2px solid $time-color;
+      background-color: transparent;
+    }
+  }
+}

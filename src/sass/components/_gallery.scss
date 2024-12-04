@@ -11,6 +11,7 @@
     background-color: $accent-bg-color;
     background-image: url('../images/mobile/product-bg.svg');
     background-size: cover;
+    z-index: -1;
     @media screen and (min-width: $tablet) {
       background-image: url('../images/tablet/product-bg.svg');
       height: 958px;
